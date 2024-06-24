@@ -1,5 +1,6 @@
 import React from 'react'
 import './sidebar.css'
+import { Users } from '../../dummyData';
 import {
     RssFeed,
     Chat,
@@ -11,6 +12,7 @@ import {
     Event,
     School,
   } from "@material-ui/icons";
+import CloseFriends from '../closeFriends/CloseFriends';
 export default function Sidebar() {
   return (
     <div className="sidebar">
@@ -56,10 +58,9 @@ export default function Sidebar() {
         <button className="sidebarButton">Show More</button>
         <hr className="sidebarHr" />
         <ul className="sidebarFriendList">
-          <li className="sidebarFriend">
-            <img src="/assets/person/2.jpeg" alt="" className='sidebarFriendImg' />
-            <span className="sidebarFriendName">Jane</span>
-          </li>
+          {Users.map((u)=> (
+            <CloseFriends key={u.id} user={u}/>
+          ))}
         </ul>
       </div>
     </div>
