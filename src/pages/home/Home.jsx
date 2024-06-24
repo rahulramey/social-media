@@ -3,15 +3,16 @@ import './home.css'
 import Topbar from '../../components/topbar/Topbar'
 import Sidebar from '../../components/sidebar/Sidebar';
 import Feed from '../../components/feed/Feed';
-import Post from '../../components/post/Post';
+import Rightbar from '../../components/rightbar/Rightbar';
 
 function Home() {
   return (
     <>
       <Topbar/>
       <div className="homeContainer">
-      <Sidebar/>
-      <Feed/>
+        <Sidebar/>
+        <Feed/>
+        <Rightbar/>
       </div>
     </>
   );
