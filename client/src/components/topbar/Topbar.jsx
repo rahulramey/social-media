@@ -3,6 +3,7 @@ import './topbar.css'
 import React from 'react'
 
 export default function Topbar() {
+    const PF = process.env.REACT_APP_PUBLIC_FOLDER;
   return (
     <div className="topbarContainer">
         <div className="topbarLeft">
@@ -33,7 +34,7 @@ export default function Topbar() {
                     <span className="topbarIconBadge">1</span>
                 </div>
             </div>
-            <img src="/assets/person/1.jpeg" alt="" className='topbarImg'/>
+            <img src={PF + "person/7.jpeg"} alt="" className='topbarImg'/>
         </div>
     </div>
   )
